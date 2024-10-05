@@ -1,0 +1,75 @@
+/* background colour of visualtion */
+body {
+    background-color: #fffcdd;
+}
+
+h1 {
+    font-size: 85px;
+    padding: 3px;
+    font-weight: bold;
+    font-family: "Archivo", sans-serif;
+    color: #5A86BF;
+    text-shadow: 4px 4px 0px #E3C894;
+}
+
+h2 span { 
+    background-color: #497dac;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 35px;
+    font-family: "Roboto Condensed", sans-serif;
+    color: white;
+}
+
+#description {
+    padding: 3px;
+    font-family: "Abel", sans-serif;
+    font-size: 25px;
+}
+
+#legend {
+    font-size: 30px;
+    padding: 3px;
+}
+
+/* size of descriptive text throughout visualisation*/
+#text-size {
+    font-family: "Abel", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#different-size {
+    font-family: "Abel", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+/* Page */
+.page {
+    width: 1200px;
+    margin: auto;
+    padding-top: 35px;
+}
+
+
+.vis-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+  }
+
+.vis-container p {
+    flex-basis: 50%;
+    margin-left: 45px; /* Adjust spacing between text and visualization */
+}
+
+.vis-container div {
+    flex-basis: 45%; /* Adjusts the width of each item */
+  }

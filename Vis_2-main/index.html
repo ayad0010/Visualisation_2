@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tourism in Australia</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="./style.css" media="all">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    .text-center {
+        text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="page">
+    <div class="text-center">
+      <h1>AUSTRALIAN TOURISM</h1>
+    </div>
+
+    <div class="intro">
+      <h2><span>  INTRODUCTION  </span></h2>
+      <div id="text-size">
+        <div id= description>
+          <p>During the global pandemic, Australia's tourism industry took a significant hit. It has since dedicated large efforts in returning back to a prosperous industry. The following visualization explores various facets of Australian tourism that can be targeted to improve this industry and boost the economy.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center"><span>TRAVELLER TRENDS ACROSS 5 YEARS</span></h2>
+    <div class="vis-container">
+      <div id="vis5"></div>
+      <div>
+        <div id="text-size">
+          <p>
+            This visualisation depicts the number of foreign travellers to Australia for 2019-2023.
+          </p>
+          <p>There is a significant decrease in the middle owing to the  global pandemic.</p>
+          <p>Prior to the pandemic, it can be seen a large amount of travellers arrived in December. Thus, more attractions and events should run during the holiday period.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center"><span>GLOBAL TRAVELLERS</span></h2>
+    <div class="vis-container">
+      <div id="vis4"></div>
+      <div>
+        <div id="different-size">
+          <p>
+            In this visualisation, the nationality of travellers to Australia can be seen.
+          </p>
+          <p>It can be identifed that the main nationality of tourists to Australia are from: New Zealand, China, America and India.</p>
+          <p>The Australian tourism industry should use this data to build stronger relationships with these nations to increase the number of visitors and build strong foreign relations.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center"><span>CITIES THAT CONTRIBUTE MOST TO THE TOURISM INDUSTRY</span></h2>
+    <div class="vis-container">
+      <div id="vis1"></div>
+      <div>
+        <div id="legend">
+          <p>💵 = 1000 Million</p>
+        </div>
+        <div id="text-size">
+          <p> The visualisation on the left depicts the amount of revenue each major
+            city in Australia contributes to the tourism Industry. 
+          </p>
+          <p> Each cash symbol reprresents 1000 million.
+          </p>
+          <p> Values from this chart been rounded to the nearest thousand.</p>
+          <p>Tourists spend most of their money in Syndey and Melbourne. Thus,
+            a strategic focus should be placed on these cities to increase revenue
+            and improve tourism related attractions.
+          </p>
+          <p> The next Olympics hosted in Australia will be Brisbane 2032. Thus, a bigger
+            budget should be allocated to improve tourists activties in Brisbane and maximise
+            revenue potential.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center"><span>EXPENDITURE BY STATE</span></h2>
+<div class="vis-container">
+  <div id="text-size">
+    <p>The visualisation on the right depicts the percentage change of 
+      expenditure by states in Australia from the 2023 financial year to the 2024 financial year.
+      A more concentrated effort should be given to improving the tourism in states
+      which experienced a decrease in expenditure. A popular solution is an increase
+      in tourism campaigns for that region.
+    </p>
+
+    <p>Particularly, more energy should be dedicated to improving
+      tourism in states such as ACT, South Australia, and Western Australia, who
+      all experienced a significant drop in expenditure by tourists.
+    </p>
+
+    <p>Additionally, the tourism strategy in Queensland should be analysed as they 
+      experienced a steady 1% increase in expenditure.
+    </p>
+
+    <p>The tourism practices Northern Territory follows should be analysed and
+      replicated in other states.
+    </p>
+  </div>
+  <div id="vis2"></div>
+</div>
+    <h2 class="text-center"><span>VISITOR SPENDING TRENDS</span></h2>
+    <div class="vis-container">
+      <div id="vis3"></div>
+      <div id="text-size">
+        <p>This visualisation depicts the purpose of visit for tourists in Australia in 2023.
+        </p>
+        <p>The annotations represent revenue for predominant reasons of travel such
+          as: business, education, holiday and visiting friends family. </p>
+        <p>As holiday is one the major reasons, this suggests the Australian Tourism
+          industry should allocate more funds for family friendly tourist attractions.
+        </p>
+        <p>Addirionally, as holiday is another major reason for travel to Australia,
+          more resources should be allocated in offering authentic Australian experiences.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <p>Author: Anusha Yadav</p>
+      <p>Date: 05/10/2024</p>
+      <p>Data Source:Tourism Australia</p>
+      <p>Link: https://www.tra.gov.au/en/international/international-tourism-results#ref6
+      </p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var specVis1 = "./isotype_money.json";
+    var specVis2 = "./pos_neg_bar_chart.json";
+    var specVis3 = "./donut_chart.json";
+    var specVis4 = "./map.json";
+    var specVis5 = "./interactive.json";
+
+    vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+  </script>
+</body>
+
+</html>

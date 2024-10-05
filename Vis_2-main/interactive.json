@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":{"text":"Month of arrival of travellers 2019-2023", "anchor": "middle"},
+    "data": {"url": "https://raw.githubusercontent.com/ayad0010/Vis_2/refs/heads/main/travellers_month.csv"},
+    "vconcat": [{
+      "width": 480,
+      "mark": "area",
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "scale": {"domain": {"param": "brush"}},
+          "axis": {"title": ""}
+        },
+        "y": {"field": "travellers", "type": "quantitative"},
+        "color":{"value":"#e99034"}
+      }
+    }, {
+      "width": 480,
+      "height": 60,
+      "mark": "area",
+      "params": [{
+        "name": "brush",
+        "select": {"type": "interval", "encodings": ["x"]}
+      }],
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title":"Date"
+        },
+        "y": {
+          "field": "travellers",
+          "type": "quantitative",
+          "axis": {"tickCount": 3, "grid": false}
+        },
+        "color":{"value":"#e99034"}
+      }
+    }]
+  }
+  
