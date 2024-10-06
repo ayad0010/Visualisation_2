@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 300,
+  "title":"Reason of travel to Australia in 2023",
+  "description": "Donut chart depicts reason of travel to Australia in 2023 and corrresponding expenditure.",
+  "data": {"url": "https://raw.githubusercontent.com/ayad0010/Week10/refs/heads/main/purpose.csv"},
+  "layer":[
+  {"mark": {"type": "arc", "innerRadius": 55},
+  "encoding": {
+    "theta": {"field": "total", "type": "quantitative"},
+    "color": {"field": "category","title":"Purpose", "type": "nominal","scale": {
+        "range": [
+          "#ffffcc",
+          "#ffeda0",
+          "#fed976",
+          "#feb24c",
+          "#fd8d3c",
+          "#fc4e2a",
+          "#bd0026" 
+        ]
+      }},
+    "tooltip": [{"field": "category","title":"Purpose: ", "type": "nominal"}, {"field": "total","title":"Number of Travellers: ", "type": "quantitative"}
+    ]
+  }},
+  {
+      "mark": {"type": "text", "align": "left", "dx": 50, "dy": 40, "fontSize":14},
+      "encoding": {
+        "text": {"value": "HOLIDAY"},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": -145, "dy": -10, "fontSize":14},
+      "encoding": {
+        "text": {"value": "FAMILY VISIT"},
+        "color": {"value": "white"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": -135, "dy": 15, "fontSize":14},
+      "encoding": {
+        "text": {"value": "$4192M"},
+        "color": {"value": "white"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 50, "dy": 60, "fontSize":14},
+      "encoding": {
+        "text": {"value": "$5876M"},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 90, "dy": -110, "fontSize":30},
+      "encoding": {
+        "text": {"value": "/"},
+        "color": {"value": "black"}
+      }
+    },
+
+    {
+      "mark": {"type": "text", "align": "left", "dx": 90, "dy": -135, "fontSize":14},
+      "encoding": {
+        "text": {"value": "EDUCATION"},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 105, "dy": -115, "fontSize":14},
+      "encoding": {
+        "text": {"value": "$8176M"},
+        "color": {"value": "black"}
+      }
+    }
+  ]  
+}

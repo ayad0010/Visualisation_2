@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text":"Expenditure by region in June 2023-2024","fontSize":24, "anchor": "middle"},
+  "config": {"view": {"stroke": ""}},
+  "width": 600,
+  "height": 60,
+  "data": {"url": "https://raw.githubusercontent.com/ayad0010/Vis_2/refs/heads/main/regional_expenditure.csv"
+  },
+  "transform": [
+    {
+      "calculate": "{'cash': '💵'}[datum.sign]",
+      "as": "emoji"
+    },
+    {"window": [{"op": "rank", "as": "rank"}], "groupby": ["state", "sign"]}
+  ],
+  "mark": {"type": "text","baseline": "middle"},
+  "encoding": {
+    "x": {"field": "rank", "type": "ordinal", "axis": null},
+    "row": {"field": "state", "header": {"title": "Cities","labelFontSize": 13}},
+    "text": {"field": "emoji", "type": "nominal"},
+    "size": {"value": 35}
+  }
+}
