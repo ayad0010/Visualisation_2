@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title":{"text":"Month of arrival of travellers 2019-2023", "anchor": "middle"},
-    "data": {"url": "https://raw.githubusercontent.com/ayad0010/Vis_2/refs/heads/main/travellers_month.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/ayad0010/Visualisation_2/refs/heads/main/travellers_month.csv"},
     "vconcat": [{
       "width": 480,
       "mark": "area",
