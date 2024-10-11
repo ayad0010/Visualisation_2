@@ -4,7 +4,7 @@
   "height": 300,
   "title":"Reason of travel to Australia in 2023",
   "description": "Donut chart depicts reason of travel to Australia in 2023 and corrresponding expenditure.",
-  "data": {"url": "https://raw.githubusercontent.com/ayad0010/Week10/refs/heads/main/purpose.csv"},
+  "data": {"url": "https://raw.githubusercontent.com/ayad0010/Visualisation_2/refs/heads/main/purpose.csv"},
   "layer":[
   {"mark": {"type": "arc", "innerRadius": 55},
   "encoding": {
